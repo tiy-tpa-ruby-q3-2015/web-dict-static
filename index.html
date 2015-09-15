@@ -1,0 +1,18 @@
+<!doctype html> <html class=no-js> <head> <meta charset=utf-8> <meta name=description> <meta name=viewport content="width=device-width, initial-scale=1"> <title>Web Dictionary</title> <link rel=apple-touch-icon href=apple-touch-icon.png>  <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> </head> <body> <!--[if lt IE 10]>
+ <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+ <![endif]--> <nav class="navbar navbar-default"> <div class=container> <div class=navbar-header> <button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#bs-example-navbar-collapse-1 aria-expanded=false> <span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span> </button> <a class=navbar-brand href=#>Web Dict</a> </div>  <div class="collapse navbar-collapse" id=bs-example-navbar-collapse-1> <form class="navbar-form navbar-right word-search-form" role=search> <div class=form-group> <input type=text name=q class=form-control placeholder=Search> </div> <button type=submit class="btn btn-default">Submit</button> </form> </div>  </div>  </nav> <div class=container> <div class="word-list list-group"> </div> <p class=text-right> <button type=button class="btn btn-primary btn-lg" data-toggle=modal data-target=.add-definition-modal> Add Definition </button> </p>  <div class="modal fade add-definition-modal" tabindex=-1 role=dialog aria-labelledby=myModalLabel> <div class=modal-dialog role=document> <div class=modal-content> <div class=modal-header> <button type=button class=close data-dismiss=modal aria-label=Close> <span aria-hidden=true>&times;</span> </button> <h4 class=modal-title id=myModalLabel>New Definition</h4> </div> <form class="add-definition-form form-horizontal" action=http://192.168.128.111:3000/create method=POST> <div class=modal-body> <div class=form-group> <label for=inputWord class="col-sm-2 control-label">Word</label> <div class=col-sm-10> <input type=text name=word class=form-control id=inputWord placeholder=Word> </div> </div> <div class=form-group> <label for=inputDefinition class="col-sm-2 control-label">Definition</label> <div class=col-sm-10> <textarea rows=4 name=definition class=form-control id=inputDefinition placeholder=Definition></textarea> </div> </div> </div> <div class=modal-footer> <button type=button class="btn btn-default" data-dismiss=modal>Close</button> <button type=submit class="btn btn-primary">Save Definition</button> </div> </form> </div> </div> </div> <div class=footer> <p>Made with ♥ at The Iron Yard in St. Petersburg, Florida.</p> </div> </div>  <script>
+    (function(b, o, i, l, e, r) {
+      b.GoogleAnalyticsObject = l;
+      b[l] || (b[l] =
+        function() {
+          (b[l].q = b[l].q || []).push(arguments)
+        });
+      b[l].l = +new Date;
+      e = o.createElement(i);
+      r = o.getElementsByTagName(i)[0];
+      e.src = 'https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script> <script src=scripts/vendor.js></script> <script src=scripts/plugins.js></script> <script src=scripts/main.js></script> </body> </html> 
